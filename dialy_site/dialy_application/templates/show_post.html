@@ -1,0 +1,18 @@
+{%extends "home.html"%}
+{%block content %}
+
+
+{% if post.photo %}
+<div class="post">
+    <p><img class="img-article-left" src="{{post.photo.url}}"></p>
+    <div><a href="{{post.torrent.url}}" download="{{post.title}}">Скачать {{post.title}}</a></div>
+</div>
+{% endif %}
+<div class="main">
+    <h1>{{post.title}}</h1>
+    <div>{{post.content|linebreaks}}</div>
+</div>
+
+
+
+{%endblock content %}

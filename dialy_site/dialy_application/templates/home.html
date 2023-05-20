@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Торрент игры</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'dialy_application/image/favicon.ico'%}">
+    <link rel="stylesheet" href= "{% static 'dialy_application/style.css'%}" >
+<!--    нужно ссылки внутри жижи брать в скобки даже если это ссылка в скобках кек-->
+</head>
+<body>
+  <ul class="menu">
+   <li class="menul "><a class="menu" href="{%url 'home' %}">Главная</a></li>
+   <li class="menul"><a class="menu" href="#news">Новости</a></li>
+  </ul>
+   <div class="row">
+{%block content %}
+{%endblock content %}
+   </div>
+</body>
+</html>

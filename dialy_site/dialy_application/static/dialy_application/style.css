@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+  }
+
+/* Флекс бокс для переноса */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post{
+    box-sizing: content-box;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+a {
+    text-decoration: none;
+ }
+/* Контейнер столбцов */
+.row {
+display: flex;
+flex-wrap: unwrap;
+height: auto;
+}
+/* Главная колонка */
+.main {
+flex: 85%;
+background-color: white;
+padding: 20px;
+}
+/* Боковая панель / левый столбец */
+.side {
+flex: 15%;
+background-color: #f1f1f1;
+padding: 20px;
+}
+
+/* Верхнее меню */
+ul.menu {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333333;
+}
+li.menul{
+float: left;
+}
+li.menur{
+float: right;
+}
+
+li a.menu {
+display: block;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+}
+
+li a:hover.menu {
+background-color: #111111;
+}
+/* Верхнее меню */

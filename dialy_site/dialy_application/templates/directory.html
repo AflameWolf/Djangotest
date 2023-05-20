@@ -1,0 +1,31 @@
+{%extends "home.html"%}
+{%block content %}
+        <div class="side">
+            <ul style="list-style-type:none;">
+        {% for c in cats %}
+            {% if c.pk == cat_selected %}
+                   <li>{{c.name}}</li>
+                {% else %}
+                   <li><a  href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+            {% endif %}
+        {% endfor %}
+
+            </ul>
+
+        </div>
+        <div class="main">
+              <div class="flex-container">
+                {%for p in post%}
+                  <div class="post">
+                    <a href="{{p.get_absolute_url}}" title="{{p.title}}">
+                        <img src="{{p.photo.url}}" alt="{{p.title}}" title="{{p.title}}" style="width:200px;height:280px;">
+                    </a>
+                    <a   href="{{p.get_absolute_url}}">{{p.title}}</a>
+                  </div>
+
+                {% endfor %}
+              </div>
+        </div>
+
+{%endblock content %}
+
