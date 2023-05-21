@@ -1,12 +1,12 @@
-from django.shortcuts import render
-from django.http import HttpResponse,FileResponse
 from django.views.generic import ListView,DetailView
+from django.core.paginator import Paginator
 from .utils import *
 
 from .models import *
 
 
 class Home(DataMixin,ListView):
+    paginate_by = 3
     model = Post# выбираем все записи из базы постов
     template_name = "directory.html"# какой шаблон вызывать
     context_object_name = "post"#Записать по какому имени будем вызывать объект подефолту object_list

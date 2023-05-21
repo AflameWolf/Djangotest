@@ -64,4 +64,14 @@ text-decoration: none;
 li a:hover.menu {
 background-color: #111111;
 }
-/* Верхнее меню */
+/*погинация*/
+.list-pages {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+/* Стиль нижнего колонтитула */
+.footer {
+background-color: #f1f1f1;
+padding: 10px;
+text-align: center;
+}

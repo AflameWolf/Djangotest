@@ -25,7 +25,22 @@
 
                 {% endfor %}
               </div>
-        </div>
+
+      <div class="footer">
+
+      <nav class="list-pages">
+      {%for p in paginator.page_range%}
+          {%if page_obj.number == p%}
+              {{p}}
+          {%else%}
+              <a href="?page={{p}}">{{p}}</a>
+          {%endif%}
+      {%endfor%}
+      </nav>
+      </div>
+    </div>
+
+
 
 {%endblock content %}
 
