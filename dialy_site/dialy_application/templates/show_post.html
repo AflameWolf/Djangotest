@@ -11,6 +11,10 @@
 <div class="main">
     <h1>{{post.title}}</h1>
     <div>{{post.content|linebreaks}}</div>
+    <ul>
+        <li>Система:{{post.system_requirements.System}}</li>
+        <li>Процессор:{{post.system_requirements.CPU}}</li>
+    </ul>
 </div>
 
 
